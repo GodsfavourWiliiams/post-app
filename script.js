@@ -106,17 +106,17 @@ function UI() {
             const div = document.createElement('div');
             div.classList.add('col-md-4');
             div.innerHTML = `
-        <div class=" card card-body flashcard my-3">
-          <div class="d-flex justify-between">
+        <div class="box card shadow-sm card-body flashcard my-3">
+          <div class="d-flex justify-content-between">
               <h5 class="question text-capitalize">${question.title}</h5>
-              <i class="fas fa-grip-horizontal cursor-pointer"></i>
+              <i class="btn dragBtn fas fa-grip-horizontal ms-5"></i>
           </div>
           <a href="#" class="text-capitalize my-3 show-answer">Show/Hide Answer</a>
         <h5 class="answer mb-3">${question.answer}</h5>
         <div class="flashcard-btn d-flex justify-content-between">
    
-         <a href="#" id="edit-flashcard" class=" btn my-1 edit-flashcard text-uppercase" data-toggle="modal" data-target="#locModal" data-id="${question.id}">edit</a>
-         <a href="#" id="delete-flashcard" class=" btn my-1 delete-flashcard text-uppercase" data-id="${question.id}">delete</a>
+         <a href="#" id="edit-flashcard" class="btn btn-outline-success my-1 edit-flashcard text-uppercase" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="${question.id}">edit</a>
+         <a href="#" id="delete-flashcard" class="btn btn-outline-danger my-1 delete-flashcard text-uppercase" data-id="${question.id}">delete</a>
         </div>
        </div>`;
             element.appendChild(div);
@@ -173,4 +173,29 @@ search.addEventListener("keyup", () => {
             post.style.display = "none"
         }
     });
+});
+const boxes = document.querySelectorAll('.card');
+
+
+window.addEventListener('scroll', scrolling);
+
+scrolling();
+
+function scrolling() {
+    const triggerBottom = window.innerHeight * (4 / 5);
+    boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        if (triggerBottom > boxTop) {
+            box.classList.add('show');
+        } else {
+            box.classList.remove('show')
+        }
+    })
+}
+
+const dragArea = document.querySelector(".sortable");
+
+new Sortable(dragArea, {
+    handle: '.dragBtn', // handle's class
+    animation: 650
 });

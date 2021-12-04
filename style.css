@@ -1,7 +1,7 @@
 :root {
     --mainWhite: #f5f5f5;
     --mainDark: #333333;
-    --mainOrange: #ff8552;
+    /* --mainOrange: #ff8552; */
     --mainGreen: #297373;
 }
 
@@ -26,45 +26,7 @@ body {
     top: 0;
     right: 2%;
     font-size: 2rem;
-    color: var(--mainOrange);
     cursor: pointer;
-}
-
-.close-btn:hover {
-    color: var(--mainGreen);
-}
-
-.submitBtn {
-    border: 0.2rem solid var(--mainGreen);
-    color: var(--mainGreen);
-    background: transparent;
-}
-
-.submitBtn:hover {
-    background: var(--mainGreen);
-    color: var(--mainWhite);
-}
-
-.edit-flashcard {
-    border: 0.2rem solid var(--mainGreen);
-    color: var(--mainGreen);
-    background: transparent;
-}
-
-.edit-flashcard:hover {
-    background: var(--mainGreen);
-    color: var(--mainDark);
-}
-
-.delete-flashcard {
-    border: 0.2rem solid var(--mainOrange);
-    color: var(--mainOrange);
-    background: transparent;
-}
-
-.delete-flashcard:hover {
-    background: var(--mainOrange);
-    color: var(--mainDark);
 }
 
 .answer {
