@@ -21,6 +21,7 @@
         <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <input class="form-control form-control-dark w-100" type="text" id="search" placeholder="Search" aria-label="Search">
         <div class="navbar-nav">
             <div class="nav-item text-nowrap">
@@ -33,44 +34,35 @@
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                 <div class="position-sticky pt-3">
-                    <ul class="nav nav-pills flex-column mb-auto">
+                    <ul class="nav nav-pills flex-column mb-auto px-3">
                         <li class="nav-item">
-                            <a href="#" class="nav-link bg-success text-light" aria-current="page">
-                                <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg> Home
+                            <a href="#" class="nav-link bg-success link-light">
+                                <i class="fas fa-fw fa-tachometer-alt"></i> <span>Dashboard</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#" class="nav-link link-dark">
-                                <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg> Dashboard
+                        <hr>
+                        <li class="nav-item">
+                            <a class="nav-link link-dark" href="#">
+                                <i class="fas fa-fw fa-cog"></i>
+                                <span>Components</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#" class="nav-link link-dark">
-                                <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg> Orders
+                        <li class="nav-item mb-5">
+                            <a class="nav-link link-dark" href="#">
+                                <i class="fas fa-fw fa-wrench"></i>
+                                <span>Utilities</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#" class="nav-link link-dark">
-                                <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg> Products
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link link-dark">
-                                <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg> Customers
-                            </a>
-                        </li>
+
+                        <div class="sidebar-card d-none d-lg-flex">
+                            <img class="sidebar-card-illustration mb-2" src="undraw_rocket.svg" alt="...">
+                            <p class="text-center mb-2"><strong>Question Map Pro</strong> is packed with premium features, components, and more!</p>
+                            <a class="btn btn-success btn-sm" href="">Upgrade to Pro!</a>
+                        </div>
                     </ul>
+
                 </div>
 
-                <!--  -->
-                <hr>
-                <div class="dropdown">
-                    <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="eg.jpg" alt="" width="40" height="40" class="rounded-circle me-2">
-                        <strong>User</strong>
-                    </a>
-                    </ul>
-                </div>
             </nav>
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
@@ -96,7 +88,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <div class="feedback alert w-75 text-capitalize question-card">
+                                <div class="feedback alert w-full border-danger text-capitalize question-card">
                                     customer feedback
                                 </div>
                                 <form id="question-form">
@@ -116,6 +108,12 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="container">
+                    <div class="item item1"></div>
+                    <div class="item item2"></div>
+                    <div class="item item3"></div>
+                    <div class="item item4"></div>
                 </div>
                 <div class="sortable row px-2" id="questions-list">
 
@@ -137,7 +135,6 @@
                         </li>
                     </ul>
                 </nav>
-
             </main>
         </div>
     </div>

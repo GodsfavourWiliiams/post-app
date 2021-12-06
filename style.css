@@ -89,3 +89,144 @@ body {
     top: .25rem;
     right: 1rem;
 }
+
+.sidebar .sidebar-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.875rem;
+    border-radius: 0.35rem;
+    padding: 1rem;
+    background-color: rgba(68, 66, 66, 0.1);
+    position: relative;
+}
+
+.sidebar .sidebar-card .sidebar-card-illustration {
+    height: 6rem;
+}
+
+
+/* preloader to fecht avilable questions */
+
+.disppear {
+    animation: vanish 1.5s forwards;
+}
+
+@keyframes vanish {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.container {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 100;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.item1 {
+    background-color: blue;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: item1_move 1.8s cubic-bezier(0.6, .01, 0.4, 1) infinite;
+}
+
+.item2 {
+    background-color: red;
+    top: 0;
+    right: 0;
+    animation: item2_move 1.8s cubic-bezier(0.6, .01, 0.4, 1) infinite;
+}
+
+.item3 {
+    background-color: chocolate;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    animation: item3_move 1.8s cubic-bezier(0.6, .01, 0.4, 1) infinite;
+}
+
+.item4 {
+    background-color: green;
+    bottom: 0;
+    left: 0;
+    animation: item4_move 1.8s cubic-bezier(0.6, .01, 0.4, 1) infinite;
+}
+
+@keyframes item1_move {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(0, 100px);
+    }
+    50% {
+        transform: translate(100px, 100px);
+    }
+    75% {
+        transform: translate(100px, 0);
+    }
+}
+
+@keyframes item2_move {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-100px, 0);
+    }
+    50% {
+        transform: translate(-100px, 100px);
+    }
+    75% {
+        transform: translate(0, 100px);
+    }
+}
+
+@keyframes item3_move {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(0, -100px);
+    }
+    50% {
+        transform: translate(-100px, -100px);
+    }
+    75% {
+        transform: translate(-100px, 0);
+    }
+}
+
+@keyframes item4_move {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(100px, 0);
+    }
+    50% {
+        transform: translate(100px, -100px);
+    }
+    75% {
+        transform: translate(0, -100px);
+    }
+}
