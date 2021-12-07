@@ -21,17 +21,9 @@ function eventListeners() {
         id = 1;
     }
     data.forEach(function(question) {
-            ui.addQuestion(questionList, question);
-        })
-        //     //show question form
-        // showBtn.addEventListener('click', function() {
-        //     ui.showQuestion(questionCard);
-        // });
-        // //hide question form
-        // closeBtn.addEventListener('click', function() {
-        //     ui.hideQuestion(questionCard);
-        // });
-        //add question
+        ui.addQuestion(questionList, question);
+    })
+
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
