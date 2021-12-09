@@ -82,8 +82,8 @@ function deletePost(e) {
 function enableEdit(e) {
     if (e.target.parentElement.classList.contains('edit')) {
         const id = e.target.parentElement.dataset.id;
-        const title = e.target.parentElement.previousElementSibling.previousElementSibling.textContent;
-        const body = e.target.parentElement.previousElementSibling.textContent;
+        const title = e.target.parentElement.textContent;
+        const body = e.target.parentElement.textContent;
 
         const data = {
             id,
