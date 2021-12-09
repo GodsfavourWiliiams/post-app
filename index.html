@@ -10,7 +10,7 @@
     <!-- jsDelivr :: Sortable :: Latest (https://www.jsdelivr.com/package/npm/sortablejs) -->
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../src/style.css">
     <title>Post</title>
 </head>
 
@@ -64,7 +64,7 @@
 
             </nav>
 
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 postsContainer">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Dashboard</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
@@ -86,22 +86,20 @@
                                 <h5 class="modal-title" id="exampleModalLabel">Add Posts</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body">
-                                <div class="feedback alert w-full border-danger text-capitalize question-card">
-                                    customer feedback
-                                </div>
+                            <div class="modal-body card-form">
                                 <form id="question-form">
                                     <div class="form-group">
-                                        <label for="city">Question</label>
-                                        <input type="text" id="question-input" class="form-control">
+                                        <label for="city">Whats on your mind?</label>
+                                        <input type="text" id="title" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label for="state">Answer</label>
-                                        <textarea type="text" id="answer-input" class="form-control"></textarea>
+                                        <label for="state">Body</label>
+                                        <textarea type="text" id="body" class="form-control"></textarea>
                                     </div>
+                                    <input type="hidden" id="id" value="">
                                     <div class="modal-footer border-top">
                                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                        <button id="w-change-btn" type="submit" class="btn submitBtn btn-success">Save changes</button>
+                                        <button type="submit" class="btn submitBtn btn-success">Save changes</button>
                                     </div>
                                 </form>
                             </div>
@@ -114,7 +112,7 @@
                     <div class="item item3"></div>
                     <div class="item item4"></div>
                 </div>
-                <div class="sortable row px-2" id="questions-list">
+                <div class="sortable row px-2" id="posts">
                     <!-- 404 Error Text -->
                     <div class="error-container text-center">
                         <img src="undraw_no_data_re_kwbl.svg" alt="" class="error mb-3">
@@ -124,7 +122,7 @@
                     </div>
                 </div>
                 <nav aria-label="Page navigation example">
-                    <!-- <ul class="pagination">
+                    <ul class="pagination">
                         <li class="page-item">
                             <a class="page-link" href="#" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
@@ -138,7 +136,7 @@
                                 <span aria-hidden="true">&raquo;</span>
                             </a>
                         </li>
-                    </ul> -->
+                    </ul>
                 </nav>
             </main>
         </div>
@@ -149,6 +147,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
 
-<script src="script.js"></script>
+<script src="build/app.bundle.js"></script>
 
 </html>
