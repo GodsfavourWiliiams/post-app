@@ -1,11 +1,6 @@
 {
   "posts": [
     {
-      "title": "Abadia",
-      "body": "abobbo\n        \n      ",
-      "id": 1
-    },
-    {
       "id": 2,
       "title": "some comment",
       "body": "post three"
@@ -14,6 +9,11 @@
       "id": 3,
       "title": "post three",
       "body": "post three"
+    },
+    {
+      "title": "Post one vs post four",
+      "body": "post that wins",
+      "id": 4
     }
   ]
 }

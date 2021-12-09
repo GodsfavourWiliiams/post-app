@@ -20,7 +20,7 @@ class UI {
                 <i class="btn dragBtn fas fa-grip-horizontal "></i>
             </div>
           <h6 class="mb-3">${post.body}</h6>
-          <div class="flashcard-btn d-flex justify-content-between">
+          <div class="">
         <a href="#" class="edit card-link" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="${post.id}">
         <i class="fa fa-edit"></i>
       </a>
