@@ -31,11 +31,5 @@ $ npm run build
 
 ## More Info
 
-### Author
-
-Brad Traversy
-[Traversy Media](http://www.traversymedia.com)
-
-### License
-
-This project is licensed under the MIT License
+This is a webpack built by traverse media which I used to compile ES2015, ES2016 & ES2017.
+I used it to build this Post app, which runs on a json server and for now runs locally 
