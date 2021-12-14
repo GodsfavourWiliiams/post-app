@@ -20,16 +20,20 @@ class UI {
                 <i class="btn dragBtn fas fa-grip-horizontal "></i>
             </div>
           <h6 class="mb-3">${post.body}</h6>
-          <div class="">
-        <a href="#" class="edit card-link" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="${post.id}">
-        <i class="fa fa-edit"></i>
-      </a>
-
-      <a href="#" class="delete card-link" data-id="${post.id}">
-      <i class="far fa-trash-alt me-2"></i>
-    </a>
-    </div>
-    </div>
+           <div class="d-flex justify-content-between">
+           <div class="">
+                <a href="#" class="edit card-link" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="${post.id}">
+                    <i class="fa fa-edit"></i>
+                </a>
+                <a href="#" class="delete card-link" data-id="${post.id}">
+                    <i class="far fa-trash-alt me-2"></i>
+                </a>
+                </div>
+                <div class="time">
+                <p class="">Time</p>
+                </div>
+            </div>
+        </div>
       `;
         });
 
@@ -136,5 +140,21 @@ const dragArea = document.querySelector(".sortable");
 new Sortable(dragArea, {
     handle: '.dragBtn', // handle's class
     animation: 650
+});
+
+// search filter
+
+search.addEventListener("keyup", () => {
+    const search = document.getElementById("search").value;
+    const question = document.querySelectorAll(".question");
+    // const error = document.querySelector(".error-container");
+    question.forEach(post => {
+        if (post.innerText.toLowerCase().includes(search.toLowerCase())) {
+            post.parentElement.parentElement.style.display = "block"
+        } else {
+            post.parentElement.parentElement.style.display = "none";
+        }
+
+    });
 });
 export const ui = new UI();

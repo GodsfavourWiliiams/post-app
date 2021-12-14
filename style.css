@@ -214,14 +214,6 @@
     }
 }
 
-.error-container {
-    display: none;
-}
-
-.showError {
-    display: block;
-}
-
 .error {
     position: relative;
     top: 50px;
